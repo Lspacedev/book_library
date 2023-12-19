@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .content {
+    padding: 25px;
+    border: 1px solid black;
+  }
+  
+  .header {
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 4px 4px -3px;
+  }
+  
+  .books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 5px;
+  }
