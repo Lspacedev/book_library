@@ -1,21 +1,102 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   .content {
     padding: 25px;
+    margin: 10px;
     border: 1px solid black;
   }
+
+  .content div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+  }
+
+  .content button {
+    padding: 5px 5px;
+    width: 100%;
+    border: none;
+  }
+
+
   
   .header {
     padding: 35px;
     text-align: center;
     box-shadow: 0 4px 4px -3px;
+
+    font-size: 35px;
   }
   
   .books {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 5px;
+  }
+
+  #show-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+    margin-left: 5px;
+    border: none;
+    
+    font-size: 45px;
+    color: grey;
+  }
+
+  #show-dialog:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+
+  #dialog {
+    border: 1px solid black;
+    padding: 25px;
+    font-size: 25px;
+
+    font-weight: lighter;
+  }
+
+  .book_title label{
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .book_auth label{
+    display: flex;
+    justify-content: center;
+  }
+
+  .book_pages label{
+    display: flex;
+    justify-content: center;
+  }
+
+  #title, #author, #pages {
+    display: flex;
+    width: 100%;
+
+  }
+
+  .dialog-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    padding: 10px;
+  }
+
+  .dialog-buttons button {
+    padding: 10px 15px;
+    border: none;
   }

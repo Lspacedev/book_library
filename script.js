@@ -27,11 +27,11 @@ function changeRead(element){
 const container = document.querySelector(".books");
 
 function displayBooks(array){
- 
   let arr = array.slice(-1);
+
   for(let i = 0; i < arr.length; i++){
     
-    let newDiv = document.createElement('div');
+    const newDiv = document.createElement('div');
     newDiv.classList.add('content');
     
     let title = document.createElement('div');
@@ -64,14 +64,14 @@ function displayBooks(array){
     newDiv.appendChild(button2);
     
     container.appendChild(newDiv);
-    console.log(myLibrary)
+  
+
     button.addEventListener("click", ()=> {
       let todelete = button.parentNode;
       todelete.remove();
-      //console.log()
       let idx = todelete.id;
       myLibrary.splice(idx, 1);
-      console.log(myLibrary)
+
     });
     
      button2.addEventListener("click", ()=> {
@@ -88,9 +88,14 @@ const dialog = document.getElementById("dialog");
 const form = document.querySelector(".form");
 
 const confirmBtn = dialog.querySelector("#confirmBtn");
+const cancel = document.getElementById("cancel");
 
 showBtn.addEventListener("click", ()=> {
     dialog.showModal();
+});
+
+cancel.addEventListener("click", () => {
+  dialog.close();
 });
 
 
@@ -109,7 +114,3 @@ confirmBtn.addEventListener("click", (e) => {
   dialog.close();
   
 });
-console.log(myLibrary)
-
-//
-displayBooks(myLibrary)
